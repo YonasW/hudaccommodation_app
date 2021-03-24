@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'App/signIn/sign_in_page.dart';
+import 'package:hudaccommodation_app/app/landing_page.dart';
 
 void main() {
   runApp(myHudApp());
@@ -15,6 +14,6 @@ class myHudApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.brown,
         ),
-        home: SignInPage());
+        home: LandingPage());
   }
 }
