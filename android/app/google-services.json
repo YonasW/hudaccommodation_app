@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "823963573692",
+    "project_id": "hud-accomodation-app",
+    "storage_bucket": "hud-accomodation-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:823963573692:android:8ffed737e6907080dcdfb9",
+        "android_client_info": {
+          "package_name": "uk.hudaccommodation_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "823963573692-v7uds0pj2cs7irbbem25qia1nrdqng9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKCn6nny5ykSJFlpKngGm7iFeV_6IjtTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "823963573692-v7uds0pj2cs7irbbem25qia1nrdqng9i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
