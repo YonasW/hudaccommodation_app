@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hud Accommodation</string>
+    <string name="facebook_app_id">457468532041737</string>
+    <string name="fb_login_protocol_scheme">fb457468532041737</string>
+</resources>
