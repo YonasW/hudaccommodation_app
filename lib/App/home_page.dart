@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:hudaccommodation_app/common_widgets/platform_alert_dialog.dart';
 import 'package:hudaccommodation_app/services/auth.dart';
+import 'package:provider/provider.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({@required this.auth});
-
-  final AuthBase auth;
-
-  Future<void> _signOut() async {
+  Future<void> _signOut(BuildContext context) async {
     try {
+      final auth = Provider.of<AuthBase>(context, listen: false);
       await auth.signOut();
     } catch (e) {
       print(e.toString());
+    }
+  }
+
+  Future<void> _confirmSignOut(BuildContext context) async {
+    final didRequestSignOut = await PlatformAlertDialog(
+      title: 'Logout',
+      content: 'Are you sure that you want log out? ',
+      cancelActionText: 'Cancel',
+      defaultActionText: 'Logout',
+    ).show(context);
+    if (didRequestSignOut == true) {
+      _signOut(context);
     }
   }
 
@@ -20,8 +31,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Home Page'),
         actions: <Widget>[
-          // ignore: deprecated_member_use
-          FlatButton(
+          TextButton(
             child: Text(
               'Log Out',
               style: TextStyle(
@@ -29,7 +39,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-            onPressed: _signOut,
+            onPressed: () => _confirmSignOut(context),
           )
         ],
       ),

@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:hudaccommodation_app/app/landing_page.dart';
 import 'package:hudaccommodation_app/services/auth.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(myHudApp());
+  runApp(MyHudApp());
 }
 
-// ignore: camel_case_types
-class myHudApp extends StatelessWidget {
+class MyHudApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hud Accommodation',
-      theme: ThemeData(
-        primarySwatch: Colors.brown,
-      ),
-      home: LandingPage(
-        auth: Auth(),
+    // ignore: missing_required_param
+    return Provider<AuthBase>(
+      create: (context) => Auth(),
+      child: MaterialApp(
+        title: 'Hud Accommodation',
+        theme: ThemeData(
+          primarySwatch: Colors.brown,
+        ),
+        home: LandingPage(),
       ),
     );
   }

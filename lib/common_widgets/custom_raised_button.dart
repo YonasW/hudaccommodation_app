@@ -17,9 +17,11 @@ class CustomRaisedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
+      // ignore: deprecated_member_use
       child: RaisedButton(
         child: child,
         color: color,
+        disabledColor: color,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(borderRadius),
